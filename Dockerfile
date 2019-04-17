@@ -1,8 +1,8 @@
 FROM golang:alpine
-MAINTAINER "Remko Seelig <r.seelig@devon.nl>"
+MAINTAINER "Wojciech Puchta <puchtaw@gmail.com>"
 
 # Configure the Terraform version here
-ENV TERRAFORM_VERSION=0.10.8
+ENV TERRAFORM_VERSION=0.11.13
 
 RUN apk add --update git bash openssh
 
