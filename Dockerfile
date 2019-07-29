@@ -1,5 +1,5 @@
 FROM golang:alpine
-MAINTAINER "Wojciech Puchta <puchtaw@gmail.com>"
+MAINTAINER "Wojciech Puchta <wojciech.puchta@hicron.com>"
 
 # Configure the Terraform version here
 ENV TERRAFORM_VERSION=0.11.13
