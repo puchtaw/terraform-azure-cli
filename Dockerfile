@@ -2,7 +2,7 @@ FROM golang:alpine
 MAINTAINER "Wojciech Puchta <wojciech.puchta@hicron.com>"
 
 # Configure the Terraform version here
-ENV TERRAFORM_VERSION=0.11.13
+ENV TERRAFORM_VERSION=0.12.7
 
 RUN apk add --update git bash openssh
 
@@ -30,6 +30,9 @@ ENV GARCH amd64
 ENV CGO_ENABLED 0
 RUN go install -v -a -installsuffix cgo \
   && cp $GOPATH/bin/azure-storage-azcopy /bin/azcopy 
+
+# install cli utils
+RUN apk add vim curl
 
 # Start in root's home
 WORKDIR /root
