@@ -33,6 +33,8 @@ RUN go install -v -a -installsuffix cgo \
 
 # install cli utils
 RUN apk add vim curl
+RUN mv /etc/profile.d/color_prompt /etc/profile.d/color_prompt.sh
+COPY alias.sh /etc/profile.d/alias.sh
 
 # Start in root's home
 WORKDIR /root
