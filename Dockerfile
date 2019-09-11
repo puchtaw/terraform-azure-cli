@@ -1,7 +1,7 @@
 FROM golang:alpine
 MAINTAINER "Wojciech Puchta <wojciech.puchta@hicron.com>"
 
-ENV TERRAFORM_VERSION=0.12.7
+ENV TERRAFORM_VERSION=0.12.8
 ENV TF_DEV=true
 ENV TF_RELEASE=true
 
