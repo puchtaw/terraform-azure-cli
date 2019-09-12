@@ -27,7 +27,7 @@ RUN apk add libc6-compat \
   && mv /tmp/azcopy_linux_amd64*/azcopy /bin/azcopy
 
 # install cli utils
-RUN apk add vim curl
+RUN apk add vim curl jq
 RUN mv /etc/profile.d/color_prompt /etc/profile.d/color_prompt.sh
 COPY alias.sh /etc/profile.d/alias.sh
 
