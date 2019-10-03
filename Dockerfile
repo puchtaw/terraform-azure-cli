@@ -1,7 +1,7 @@
 FROM golang:alpine
 MAINTAINER "Wojciech Puchta <wojciech.puchta@hicron.com>"
 
-ENV TERRAFORM_VERSION=0.12.8
+ENV TERRAFORM_VERSION=0.12.9
 ENV TF_DEV=true
 ENV TF_RELEASE=true
 
@@ -28,7 +28,6 @@ RUN apk add libc6-compat \
 
 # install cli utils
 RUN apk add vim curl jq
-RUN mv /etc/profile.d/color_prompt /etc/profile.d/color_prompt.sh
-COPY alias.sh /etc/profile.d/alias.sh
 
 WORKDIR /root
+ENTRYPOINT /bin/bash
