@@ -1,7 +1,7 @@
 FROM golang:alpine
 MAINTAINER "Wojciech Puchta <wojciech.puchta@hicron.com>"
 
-ENV TERRAFORM_VERSION=0.12.9
+ENV TERRAFORM_VERSION=0.12.12
 ENV TF_DEV=true
 ENV TF_RELEASE=true
 
@@ -27,7 +27,9 @@ RUN apk add libc6-compat \
   && mv /tmp/azcopy_linux_amd64*/azcopy /bin/azcopy
 
 # install cli utils
-RUN apk add vim curl jq
+RUN apk add vim curl jq ansible
+COPY .bashrc /root/.bashrc
+COPY config /etc/ssh/ssh_config
 
 WORKDIR /root
 CMD /bin/bash
